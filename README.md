@@ -1,5 +1,5 @@
 # systemd-units
-Collection if various systemd unit files
+Collection of various systemd unit files
 
 ## eix-sync
 Systemd service and timer unit for Gentoo's [eix-sync](https://github.com/vaeth/eix/):
