@@ -1,12 +1,11 @@
 # systemd-units
 Collection of various systemd unit files
 
-## eix-sync
+## eix-sync service and timer unit
 Systemd service and timer unit for Gentoo's [eix-sync](https://github.com/vaeth/eix/):
 * [<code>eix-sync.service</code>](eix-sync.service): Calls Gentoo's <code>/usr/bin/eix-sync -q</code> with a high nice level and a low IO best-effort scheduling priority.
 * [<code>eix-sync.timer</code>](eix-sync.timer): Corresponding timer unit, which calls the <code>eix-sync.service</code> daily at 09:00
 
-Usage:
 Manually start eix-sync via <code>systemctl start eix-sync</code> or install the timer unit:
 ```bash
 systemctl enable eix-sync.timer
