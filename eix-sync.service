@@ -1,0 +1,12 @@
+[Unit]
+Description=Call layman/emerge --sync/--metadata
+Documentation=man:eix(1) https://wiki.gentoo.org/wiki/Eix
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/eix-sync -q
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
